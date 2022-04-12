@@ -1,0 +1,58 @@
+.domoswap__header {
+    display: flex;
+    width: 100%;
+}
+
+.section__padding {
+
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+
+.domoswap__header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.domoswap__header-content h1 {
+
+    font-family: var(--font-family);
+
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.3rem;
+
+}
+
+.domoswap__header-content p {
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 27px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    color:  var(--color-text);
+}
+
+.domoswap__header-content__image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.domoswap__header-content__image img{
+    width: 100%;
+    height: 100%;
+}
+
+
