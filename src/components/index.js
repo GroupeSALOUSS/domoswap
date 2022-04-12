@@ -1,0 +1,6 @@
+export { default as Article} from './article/Article'
+export { default as CTA} from './cta/Cta'
+export { default as Detination} from './destination/Destination'
+export { default as Memberfb} from './memberfb/Memberfb'
+export { default as Navbar} from './navbar/Navbar'
+export { default as Step} from './step/Step'
