@@ -16,8 +16,7 @@ const Discover = () => {
             <div className="col-md-4">
               <div class="card p-3" >
               <img src={img1} alt="" />
-
-                <div class="card-body text-center">
+              <div class="card-body text-center">
                   <h5 class="card-title mb-3 fs-4 fw-bold">this is my house </h5>
                   <p class="card-text lead">Torronto, Canada. </p>
                   <button type="submit" className="btn btn-outline-primary">Visit my domo<i className="fa fa-paper-plane ms-2"></i></button>
