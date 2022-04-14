@@ -1,8 +1,10 @@
 import React from 'react'
 import './App.css'
 
-import { Advantages, Destinations, Discover, Feedback, Footer, HowItWorks, Header } from './containers'
-import { Navbar, CTA,  } from './components'
+import {Router, Switch} from 'react-router'
+
+import { Discover, Footer, HowItWorks, Header, Contact } from './containers'
+import { Navbar } from './components'
 
 const App = () => {
   return (
@@ -10,15 +12,12 @@ const App = () => {
       <div className='gradient__bg'>
           <Navbar />
           <Header />
-      </div>
           <Discover />
-          <CTA />
           <HowItWorks />
-          <CTA />
-          <Advantages />
-          <Destinations />
-          <Feedback />
+          <Contact />
           <Footer />
+      </div>
+          
     </div>
   )
 }

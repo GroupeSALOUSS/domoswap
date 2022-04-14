@@ -7,9 +7,9 @@ import {Navbar, Container, Form, Nav, NavDropdown, FormControl, Button } from 'r
 function navbar() {
   return (
     <Navbar expand="lg">
-  <Container fluid>
+  <Container fluid >
     <Navbar.Brand href="#"> <img src={logo} alt="domoswap" /> </Navbar.Brand>
-    <Form className="d-flex">
+    <Form className="d-flex " >
         <FormControl
           type="search"
           placeholder="Where are you going?"
@@ -29,7 +29,7 @@ function navbar() {
         <Nav.Link href="#Discover">Discover</Nav.Link>
         <Nav.Link href="#Howitworks"> how does it work ?</Nav.Link>
         <Nav.Link> Sign in </Nav.Link>
-        <Button  variant='primary'>Sign up </Button>
+        <Button  variant='primary' >Sign up </Button>
       </Nav>
       
     </Navbar.Collapse>

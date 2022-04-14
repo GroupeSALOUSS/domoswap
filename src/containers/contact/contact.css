@@ -1,0 +1,24 @@
+section{
+    background: var(gradient__text);
+    
+}
+
+.ContactUs{
+    max-height: 900px;
+}
+
+.img{
+    padding-left: 80px;
+}
+
+hr{
+    margin-bottom:50px;
+}
+
+.name{
+    padding-top: 40px;
+}
+
+.title{
+    padding-top: 100px;
+}

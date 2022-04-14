@@ -7,6 +7,11 @@
 
 body {
     background: var(--color-bg);
+    max-height: 2900px;
+}
+#root{
+  max-height: 2900px;
+
 }
 
 a {

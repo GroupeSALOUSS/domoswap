@@ -1,0 +1,17 @@
+.container{
+    padding-bottom: 100px;
+    background: var(--gra);
+}
+
+
+.card{
+    transition: all 0.5 ease;
+}
+
+hr{
+    margin-bottom:50px;
+}
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
