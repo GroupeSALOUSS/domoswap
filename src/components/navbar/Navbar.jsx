@@ -1,41 +1,62 @@
-import React from 'react'
-import logo from '../../assets/Logo.svg'
-import {Navbar, Container, Form, Nav, NavDropdown, FormControl, Button } from 'react-bootstrap'
+import React from "react";
+import logo from "../../assets/Logo.svg";
+import { NavLink } from "react-router-dom";
 
-// utiliser bootstrap pour créer la navbar 
+// utiliser bootstrap pour créer la navbar
 
 function navbar() {
   return (
-    <Navbar expand="lg">
-  <Container fluid >
-    <Navbar.Brand href="#"> <img src={logo} alt="domoswap" /> </Navbar.Brand>
-    <Form className="d-flex " >
-        <FormControl
-          type="search"
-          placeholder="Where are you going?"
-          className="me-2"
-          aria-label="Search"
-        />
-      <Button variant="primary">Search</Button>
-      </Form>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse className="justify-content-end"  id="navbarScroll">
-      <Nav
-        className="my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
-        navbarScroll
-      >
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#Discover">Discover</Nav.Link>
-        <Nav.Link href="#Howitworks"> how does it work ?</Nav.Link>
-        <Nav.Link> Sign in </Nav.Link>
-        <Button  variant='primary' >Sign up </Button>
-      </Nav>
-      
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-  )
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light shadow">
+        <div className="container-fluid">
+          <NavLink className="navbar-brand" to="/">
+            <img src={logo} alt="" />
+          </NavLink>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <form className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-primary mr-5" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+            <ul className="navbar-nav ">
+              <li className="nav-item">
+                <NavLink className="nav-link active" to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/discover">
+                  Discover
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/howitworks">
+                  How it works?
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/contact">
+                  Contact us
+                </NavLink>
+              </li>
+              <NavLink className="btn btn-outline-primary ms-2 px-4" to="/signin">
+                Sign in
+              </NavLink>
+              <NavLink className="btn btn-primary ms-2 px-4" to="/signup">
+                Sign Up
+              </NavLink>
+            </ul>
+        </div>
+      </nav>
+    </div>
+  );
 }
 
-export default navbar
+export default navbar;

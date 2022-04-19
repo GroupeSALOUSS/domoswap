@@ -22,17 +22,17 @@ const Contact = () => {
                         </div>
                         <div className="col-md-4">
                             <form action="">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label name">Your name</label>
-                                    <input type="text" class="form-control" id="email" placeholder="John Doe"></input>
+                                <div className="mb-3">
+                                    <label for="email" className="form-label name">Your name</label>
+                                    <input type="text" className="form-control" id="email" placeholder="John Doe"></input>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email address</label>
-                                    <input type="text" class="form-control" id="name" placeholder="name@exemple.ca"></input>
+                                <div className="mb-3">
+                                    <label for="email" className="form-label">Email address</label>
+                                    <input type="text" className="form-control" id="name" placeholder="name@exemple.ca"></input>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Your Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                <div className="mb-3">
+                                    <label for="message" className="form-label">Your Message</label>
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                                 </div>
                             </form>
                             <button type="submit" className="btn btn-outline-primary">Send a Message<i className="fa fa-paper-plane ms-2"></i></button>

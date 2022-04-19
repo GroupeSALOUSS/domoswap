@@ -1,42 +1,36 @@
 import React from 'react'
 import './footer.css'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='container title'>
-      <div class="row">
-        <div class="col-2">
+    <div className='container footer-mh title'>
+      <div className="row">
+        <div className="col-2">
           <h5>Short links</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Discover</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">How it works?</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact us</a></li>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2"><NavLink to="/" className="nav-link p-0 text-muted">Home</NavLink></li>
+            <li className="nav-item mb-2"><NavLink to="/discover" className="nav-link p-0 text-muted">Discover</NavLink></li>
+            <li className="nav-item mb-2"><NavLink to="/howitworks" className="nav-link p-0 text-muted">How it works?</NavLink></li>
+            <li className="nav-item mb-2"><NavLink to="/contact" className="nav-link p-0 text-muted">Contact us</NavLink></li>
           </ul>
         </div>
-        <div class="col-8 offset-1 emailsection">
+        <div className="col-8 offset-1 emailsection">
           <form>
             <h5>Subscribe to our newsletter</h5>
             <p>Monthly digest of whats new and exciting from us.</p>
-            <div class="d-flex w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address"/>
-                <button class="btn btn-primary" type="button">Subscribe</button>
+            <div className="d-flex w-100 gap-2">
+              <label for="newsletter1" className="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
+                <button className="btn btn-primary" type="button">Subscribe</button>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="d-flex justify-content-between py-4 my-4 border-top">
-        <p>&copy; 202@ DomoSwap, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-          </svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-          </svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-          </svg></a></li>
-        </ul>
+      <div className="d-flex justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2022@ DomoSwap, Inc. All rights reserved.</p>
+        
       </div>
     </div>
   )
