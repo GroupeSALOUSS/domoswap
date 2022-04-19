@@ -50,7 +50,7 @@ const Signin = () => {
               </div>
 
               <NavLink
-                to="#"
+                to="/user"
                 className="btn btn-outline-primary primary w-100 mt-5"
               >
                 Sign in
