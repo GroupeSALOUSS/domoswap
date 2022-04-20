@@ -1,4 +1,3 @@
-import { css } from '@emotion/core'
 import React from 'react'
 
 import ImagePP  from '../../assets/ImagePP.png'

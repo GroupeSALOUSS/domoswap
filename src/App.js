@@ -4,7 +4,6 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Discover, User, Footer, HowItWorks, Header, Contact, Signin, Signup } from "./containers";
 import { Navbar } from "./components";
 
-
 const App = () => {
   return (
     <>
