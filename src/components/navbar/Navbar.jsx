@@ -49,7 +49,7 @@ function navbar() {
               </NavLink>
             </li>
 
-            {user ? (
+            {!user ? (
               
               <Dropdown>
                 <Dropdown.Toggle variant="primary" id="dropdown-basic">
@@ -57,7 +57,7 @@ function navbar() {
                 </Dropdown.Toggle>
     
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
+                  <Dropdown.Item href="/user">Profile</Dropdown.Item>
                   <Dropdown.Item href="#/action-2">Domo</Dropdown.Item>
                   <Dropdown.Item href="#/action-3">Sign out</Dropdown.Item>
                 </Dropdown.Menu>
