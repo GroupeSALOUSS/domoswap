@@ -1,6 +1,17 @@
 import axios from 'axios'
 
-const url = 'http://localhost:3001/users'
+const API = axios.create({baseURL: "http://localhost:3001"})
 
-export const fetchUser = () => axios.get(url)
-export const createUser = (newUser) => axios.post(url, newUser)
+API.interceptors.request.use((req) => {
+    if (localStorage.getItem('profile')) {
+      req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`;
+    }
+  
+    return req;
+  });
+
+export const signIn = (formData) => API.post('/users/login', formData)
+export const createUser = (newUser) => API.post('/users/signup', newUser)
+
+
+

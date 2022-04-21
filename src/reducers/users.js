@@ -1,12 +1,12 @@
-
-
-export default (users = [] ,action ) =>{
+export default (state = {authdata: null}, action) => {
     switch (action.type) {
-        case 'FETCH' :
-            return users;
-        case 'CREATE':
-            return [...users, action.payload];
+        case 'SIGNIN':
+            localStorage.setItem('profile', JSON.stringify({ ...action?.data }));
+
+            return { ...state, authData: action.data, loading: false, errors: null };
+        case 'SIGNUP':
+            return [...state, action.payload];
         default:
-            return users;
+            return state;
     }
 }
