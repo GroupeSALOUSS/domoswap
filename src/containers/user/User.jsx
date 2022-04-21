@@ -1,8 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 import ImagePP  from '../../assets/ImagePP.png'
 
 export const User = () => {
+    const user = useSelector((state) => state.user)
+
     return (
         <>
             <div className='container emp-profile'>
