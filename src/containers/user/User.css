@@ -1,0 +1,74 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+.pageImage{
+    
+    background-image:url(./rt.webp);
+    height: 150vh;
+    object-fit:contain;
+    display:flex;
+    
+    
+    
+}
+.containerImage{
+    margin-left: 5%;
+    margin-top: 10%;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    
+   
+}
+.img-holder{
+    margin: auto;
+    width: 210px;
+    height: 205px;
+    border: 3px solid black;
+    border-radius: 10px;
+    
+}
+.img{
+    
+    width: 200px;
+    height: 200px;
+    padding-left: 2px;
+    object-fit: cover;
+}
+#input[type="file"]{
+    display: none;
+}
+.label{
+    font-size: 50%;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    
+}
+.img-upload{
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.profile-head{
+    margin-top: 10%;
+    margin-left: 15%;
+}
+.form-inputs{
+    
+    padding-left: 20px;
+    margin-top: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.form-label{
+   padding-right: 50px ;
+}
+
