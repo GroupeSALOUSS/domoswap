@@ -1,7 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import "./signin.css";
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { signIn } from "../../actions/users";
+
+const initialState = {
+  email:'',
+  password:''
+}
+
 const Signin = () => {
+  const [form, setForm] = useState(initialState);
+  const history = useNavigate()
+  const dispatch = useDispatch()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(signIn(form, history));
+  };
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
   return (
     <div>
       <div className="container  my-5">
@@ -23,7 +43,7 @@ const Signin = () => {
             <h1 className="display-6 fw-bolder mb-5 text-center title">
               SIGN IN
             </h1>
-            <form className="m-5">
+            <form className="m-5" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="exampleInputEmail1" className="form-label">
                   Email address
@@ -33,6 +53,8 @@ const Signin = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  onChange={handleChange}
+                  
                 />
                 <div id="emailHelp" className="form-text">
                   We'll never share your email with anyone else.
@@ -46,15 +68,18 @@ const Signin = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
+                  onChange={(e)=>setForm({...form, password: e.target.value})}
+                  
                 />
               </div>
 
-              <NavLink
-                to="/user"
+              <button
+                
                 className="btn btn-outline-primary primary w-100 mt-5"
+                type="submit"
               >
                 Sign in
-              </NavLink>
+              </button>
             </form>
           </div>
         </div>

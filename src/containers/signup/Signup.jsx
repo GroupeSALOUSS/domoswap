@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState }  from "react";
 import "./signup.css";
 import { NavLink } from "react-router-dom";
+import { createUser } from "../../actions/users";
+import { useDispatch } from "react-redux";
+
+
 
 const Signup = () => {
+  const [user, setUser] =  useState({
+    userName: '',
+    email: '',
+    password: ''
+  })
+
+  const dispatch = useDispatch()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(createUser(user))
+  }
+  
+  const clear = () => {
+    
+  }
+
+
   return (
     <div>
       <div className="container  my-5">
@@ -24,7 +46,7 @@ const Signup = () => {
             <h1 className="display-6 fw-bolder mb-5 text-center pt-5">
               SIGN UP
             </h1>
-            <form className="m-5">
+            <form className="m-5" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label for="exampleInputUserName" className="form-label">
                   Username
@@ -34,6 +56,8 @@ const Signup = () => {
                   className="form-control"
                   id="exampleInputUserName"
                   aria-describedby="UserName"
+                  value={user.userName}
+                  onChange = {e => setUser({ ...user, userName: e.target.value})}
                 />
               </div>
               <div className="mb-3">
@@ -45,6 +69,8 @@ const Signup = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  value={user.email}
+                  onChange = {e => setUser({ ...user, email: e.target.value})}
                 />
                 <div id="emailHelp" className="form-text">
                   We'll never share your email with anyone else.
@@ -58,6 +84,8 @@ const Signup = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
+                  value={user.password}
+                  onChange = {e => setUser({ ...user, password: e.target.value})}
                 />
               </div>
               <div class="mb-3 form-check">
@@ -70,9 +98,9 @@ const Signup = () => {
                   I accept terms and conditions.
                 </label>
               </div>
-              <NavLink to="#" className="btn btn-outline-primary w-100">
+              <button  className="btn btn-outline-primary w-100"  onClick={clear}>
                 Sign up
-              </NavLink>
+              </button>
             </form>
           </div>
         </div>
