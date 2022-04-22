@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React, { Component } from 'react'
 import '../user/User.css'
-=======
-import React from 'react'
-import { useSelector } from 'react-redux'
->>>>>>> f2a9367222f1761b089eee9cb4766347a9badf6d
 
 
-<<<<<<< HEAD
 export class User extends Component {
     state ={
         profileImg: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
@@ -23,16 +17,11 @@ export class User extends Component {
     }
   render() {
       const{profileImg} = this.state
-=======
-export const User = () => {
-    const user = useSelector((state) => state.user)
-
->>>>>>> f2a9367222f1761b089eee9cb4766347a9badf6d
     return (
         
         <div> 
             <form method="" >
-                <div className='pageImage'>
+                <div className='pageImage'>git status
                         <div className='containerImage'>
                             <div className="img-holder">
                                 <img src={profileImg} alt="" id="img" className="img" />
@@ -80,7 +69,7 @@ export const User = () => {
                          <input  className='form-input' type=' text '  name='Mail' placeholder=' jonhdoe@gmail.com' />
 
                         <br />
-                        <br />git pug
+                        <br />
                          <button className="btn btn-primary" type="button">Edit</button>
                          </div>
 
